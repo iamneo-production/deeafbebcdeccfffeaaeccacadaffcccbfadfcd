@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'currconv'
+  name: 'currencypipe'
 })
 export class CurrconvPipe implements PipeTransform {
 
