@@ -3,10 +3,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'removComma'
 })
-export class RemovCommaPipe implements PipeTransform {
+export class RemoveCommaPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any): any {
+    if (value !== undefined && value !== null) {
+      return value.replace(/,/g, "");
+    } else {
+      return "";
+    }
   }
-
 }
+

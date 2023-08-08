@@ -4,16 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { RemoveCommaPipe } from './remov-comma.pipe';
 import { CurrconvPipe } from './currconv.pipe';
-import { RemovCommaPipe } from './remov-comma.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrconvPipe,
-    RemovCommaPipe,
-  
+    RemoveCommaPipe,
+    CurrconvPipe
+    
   ],
   imports: [
     BrowserModule,
@@ -24,3 +24,4 @@ import { RemovCommaPipe } from './remov-comma.pipe';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
