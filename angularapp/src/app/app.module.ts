@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CurrconvPipe } from './currconv.pipe';
+import { RemovCommaPipe } from './remov-comma.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrconvPipe,
+    RemovCommaPipe,
   
   ],
   imports: [

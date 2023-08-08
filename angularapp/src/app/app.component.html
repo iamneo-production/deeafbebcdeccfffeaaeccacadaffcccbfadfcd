@@ -16,23 +16,24 @@
       <div class="inner-div" >
         <label for="source" name="source" id="source">Enter Source CCY : </label>&nbsp;&nbsp;
         <select name="fromCurrency" id="fromCurrency" ngModel>
-          <option value="USD">{{usd.id}}</option>
-          <option value="GBP">{{gbp.id}}</option>
-          <option value="INR">{{inr.id}}</option>
+          <option value="1.126735" >{{usd.id}}</option>
+          <option value="0.876893" >{{gbp.id}}</option>
+          <option value="79.677056" >{{inr.id}}</option>
         </select>
         <br><br>
         <label for="target" name="target" id="target"  >Enter Target CCY : </label>&nbsp;&nbsp;
         <select name="toCurrency" id="toCurrency" ngModel>
-          <option value="USD">{{usd.id}}</option>
-          <option value="GBP">{{gbp.id}}</option>
-          <option value="INR">{{inr.id}}</option>
+          <option value="1.126735" >{{usd.id}}</option>
+          <option value="0.876893" >{{gbp.id}}</option>
+          <option value="79.677056" >{{inr.id}}</option>
         </select>
         <br><br>
         Amount : <input type="number" name="amount" id="amount" ngModel placeholder="Enter the amount"><br><br>
-        <button id="submitButton" class="button">SUBMIT</button><br><br>
-        <label for="resValue" name="resValue" id="resValue">{{fromCurrency | currencypipe: toCurrency : amount |number: '0.2'}}</label>
+        <button id="submitButton" class="button" >SUBMIT</button><br><br>
+        <div id="result">
+        <label for="resValue" name="resValue" id="resValue" >{{fromCurrency | currencyPipe: toCurrency : amount|number: '0.2'|removComma }}</label>
+        </div>
       </div>
-     
     </form>
   </div>
 
